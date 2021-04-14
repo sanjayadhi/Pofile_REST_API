@@ -1,5 +1,0 @@
-Virtual box
-Vagrant continaration
-Python
-Django
-Djang_restframe_work
