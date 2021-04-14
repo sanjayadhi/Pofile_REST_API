@@ -1,0 +1,2680 @@
+
+LENOVO@NITHYASHREE MINGW64 /d/CodesAndProjects/WorkSpace
+$ dir
+Profile_Rest_Api
+
+LENOVO@NITHYASHREE MINGW64 /d/CodesAndProjects/WorkSpace
+$ ^C
+
+LENOVO@NITHYASHREE MINGW64 /d/CodesAndProjects/WorkSpace
+$ cd Profile_Rest_Api
+
+LENOVO@NITHYASHREE MINGW64 /d/CodesAndProjects/WorkSpace/Profile_Rest_Api (main)
+$ git add .
+
+LENOVO@NITHYASHREE MINGW64 /d/CodesAndProjects/WorkSpace/Profile_Rest_Api (main)
+$ git commit -m "3rd commit"
+[main 0b6197a] 3rd commit
+ 1 file changed, 326 insertions(+)
+ create mode 100644 dayone.txt
+
+LENOVO@NITHYASHREE MINGW64 /d/CodesAndProjects/WorkSpace/Profile_Rest_Api (main)
+$ git push
+To https://github.com/sanjayadhi/Pofile_REST_API.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/sanjayadhi/Pofile_REST_API.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+LENOVO@NITHYASHREE MINGW64 /d/CodesAndProjects/WorkSpace/Profile_Rest_Api (main)
+$ git push .
+Everything up-to-date
+
+LENOVO@NITHYASHREE MINGW64 /d/CodesAndProjects/WorkSpace/Profile_Rest_Api (main)
+$ vagrant ssh
+VM must be running to open SSH connection. Run `vagrant up`
+to start the virtual machine.
+
+LENOVO@NITHYASHREE MINGW64 /d/CodesAndProjects/WorkSpace/Profile_Rest_Api (main)
+$ vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Checking if box 'ubuntu/bionic64' version '20200304.0.0' is up to date...
+==> default: Clearing any previously set forwarded ports...
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+==> default: Forwarding ports...
+    default: 8000 (guest) => 8000 (host) (adapter 1)
+    default: 22 (guest) => 2222 (host) (adapter 1)
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+    default: Warning: Connection reset. Retrying...
+    default: Warning: Connection aborted. Retrying...
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+    default: The guest additions on this VM do not match the installed version of
+    default: VirtualBox! In most cases this is fine, but in rare cases it can
+    default: prevent things such as shared folders from working properly. If you see
+    default: shared folder errors, please make sure the guest additions within the
+    default: virtual machine match the version of VirtualBox you have installed on
+    default: your host and reload your VM.
+    default:
+    default: Guest Additions Version: 5.2.42
+    default: VirtualBox Version: 6.1
+==> default: Mounting shared folders...
+    default: /vagrant => D:/CodesAndProjects/WorkSpace/Profile_Rest_Api
+==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> default: flag to force provisioning. Provisioners marked to run always will still run.
+
+LENOVO@NITHYASHREE MINGW64 /d/CodesAndProjects/WorkSpace/Profile_Rest_Api (main)
+$ dir
+License  Vagrantfile  dayone.txt  helloworld.py  readme.md  ubuntu-bionic-18.04-cloudimg-console.log
+
+LENOVO@NITHYASHREE MINGW64 /d/CodesAndProjects/WorkSpace/Profile_Rest_Api (main)
+$ cd vagrant
+bash: cd: vagrant: No such file or directory
+
+LENOVO@NITHYASHREE MINGW64 /d/CodesAndProjects/WorkSpace/Profile_Rest_Api (main)
+$ vagrant ssh
+Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 4.15.0-141-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed Apr 14 05:17:31 UTC 2021
+
+  System load:  0.0               Processes:             96
+  Usage of /:   3.1% of 38.71GB   Users logged in:       0
+  Memory usage: 12%               IP address for enp0s3: 10.0.2.15
+  Swap usage:   0%
+
+
+4 packages can be updated.
+2 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+New release '20.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Tue Apr 13 17:22:49 2021 from 10.0.2.2
+vagrant@ubuntu-bionic:~$ cd vagrant
+-bash: cd: vagrant: No such file or directory
+vagrant@ubuntu-bionic:~$ cd /vagrant/
+vagrant@ubuntu-bionic:/vagrant$ python -m venv ~/env
+vagrant@ubuntu-bionic:/vagrant$ source ~/env/bin/activate
+(env) vagrant@ubuntu-bionic:/vagrant$ decativate
+decativate: command not found
+(env) vagrant@ubuntu-bionic:/vagrant$ deactivate
+vagrant@ubuntu-bionic:/vagrant$ source ~/env/bin/activate
+(env) vagrant@ubuntu-bionic:/vagrant$ pip install -r requirements.txt
+Collecting Django==2.2 (from -r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/54/85/0bef63668fb170888c1a2970ec897d4528d6072f32dee27653381a332642/Django-2.2-py3-none-any.whl (7.4MB)
+    100% |████████████████████████████████| 7.5MB 126kB/s
+Collecting Djangrestframework==3.9.2 (from -r requirements.txt (line 2))
+Exception:
+Traceback (most recent call last):
+  File "/home/vagrant/env/lib/python3.6/site-packages/pip/basecommand.py", line 215, in main
+    status = self.run(options, args)
+  File "/home/vagrant/env/lib/python3.6/site-packages/pip/commands/install.py", line 353, in run
+    wb.build(autobuilding=True)
+  File "/home/vagrant/env/lib/python3.6/site-packages/pip/wheel.py", line 749, in build
+    self.requirement_set.prepare_files(self.finder)
+  File "/home/vagrant/env/lib/python3.6/site-packages/pip/req/req_set.py", line 380, in prepare_files
+    ignore_dependencies=self.ignore_dependencies))
+  File "/home/vagrant/env/lib/python3.6/site-packages/pip/req/req_set.py", line 554, in _prepare_file
+    require_hashes
+  File "/home/vagrant/env/lib/python3.6/site-packages/pip/req/req_install.py", line 278, in populate_link
+    self.link = finder.find_requirement(self, upgrade)
+  File "/home/vagrant/env/lib/python3.6/site-packages/pip/index.py", line 465, in find_requirement
+    all_candidates = self.find_all_candidates(req.name)
+  File "/home/vagrant/env/lib/python3.6/site-packages/pip/index.py", line 423, in find_all_candidates
+    for page in self._get_pages(url_locations, project_name):
+  File "/home/vagrant/env/lib/python3.6/site-packages/pip/index.py", line 568, in _get_pages
+    page = self._get_page(location)
+  File "/home/vagrant/env/lib/python3.6/site-packages/pip/index.py", line 683, in _get_page
+    return HTMLPage.get_page(link, session=self.session)
+  File "/home/vagrant/env/lib/python3.6/site-packages/pip/index.py", line 795, in get_page
+    resp.raise_for_status()
+  File "/home/vagrant/env/share/python-wheels/requests-2.18.4-py2.py3-none-any.whl/requests/models.py", line 935, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://pypi.org/simple/djangrestframework/
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$ pip install -r requirements.txt
+Collecting Django==2.2 (from -r requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/54/85/0bef63668fb170888c1a2970ec897d4528d6072f32dee27653381a332642/Django-2.2-py3-none-any.whl
+Collecting Djangrestframework==3.12.4 (from -r requirements.txt (line 2))
+Exception:
+Traceback (most recent call last):
+  File "/home/vagrant/env/lib/python3.6/site-packages/pip/basecommand.py", line 215, in main
+    status = self.run(options, args)
+  File "/home/vagrant/env/lib/python3.6/site-packages/pip/commands/install.py", line 353, in run
+    wb.build(autobuilding=True)
+  File "/home/vagrant/env/lib/python3.6/site-packages/pip/wheel.py", line 749, in build
+    self.requirement_set.prepare_files(self.finder)
+  File "/home/vagrant/env/lib/python3.6/site-packages/pip/req/req_set.py", line 380, in prepare_files
+    ignore_dependencies=self.ignore_dependencies))
+  File "/home/vagrant/env/lib/python3.6/site-packages/pip/req/req_set.py", line 554, in _prepare_file
+    require_hashes
+  File "/home/vagrant/env/lib/python3.6/site-packages/pip/req/req_install.py", line 278, in populate_link
+    self.link = finder.find_requirement(self, upgrade)
+  File "/home/vagrant/env/lib/python3.6/site-packages/pip/index.py", line 465, in find_requirement
+    all_candidates = self.find_all_candidates(req.name)
+  File "/home/vagrant/env/lib/python3.6/site-packages/pip/index.py", line 423, in find_all_candidates
+    for page in self._get_pages(url_locations, project_name):
+  File "/home/vagrant/env/lib/python3.6/site-packages/pip/index.py", line 568, in _get_pages
+    page = self._get_page(location)
+  File "/home/vagrant/env/lib/python3.6/site-packages/pip/index.py", line 683, in _get_page
+    return HTMLPage.get_page(link, session=self.session)
+  File "/home/vagrant/env/lib/python3.6/site-packages/pip/index.py", line 795, in get_page
+    resp.raise_for_status()
+  File "/home/vagrant/env/share/python-wheels/requests-2.18.4-py2.py3-none-any.whl/requests/models.py", line 935, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://pypi.org/simple/djangrestframework/
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$ pip install -r requirements.txt
+Collecting Django==2.2 (from -r requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/54/85/0bef63668fb170888c1a2970ec897d4528d6072f32dee27653381a332642/Django-2.2-py3-none-any.whl
+Collecting Djangorestframework==3.9.4 (from -r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/1b/fe/fcebec2a98fbd1548da1c12ce8d7f634a02a9cce350833fa227a625ec624/djangorestframework-3.9.4-py2.py3-none-any.whl (911kB)
+    100% |████████████████████████████████| 921kB 666kB/s
+Collecting sqlparse (from Django==2.2->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/14/05/6e8eb62ca685b10e34051a80d7ea94b7137369d8c0be5c3b9d9b6e3f5dae/sqlparse-0.4.1-py3-none-any.whl (42kB)
+    100% |████████████████████████████████| 51kB 2.4MB/s
+Collecting pytz (from Django==2.2->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/70/94/784178ca5dd892a98f113cdd923372024dc04b8d40abe77ca76b5fb90ca6/pytz-2021.1-py2.py3-none-any.whl (510kB)
+    100% |████████████████████████████████| 512kB 1.0MB/s
+Installing collected packages: sqlparse, pytz, Django, Djangorestframework
+Successfully installed Django-2.2 Djangorestframework-3.9.4 pytz-2021.1 sqlparse-0.4.1
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$
+(env) vagrant@ubuntu-bionic:/vagrant$ django-admin.py stratproject profiles_project .
+No Django settings specified.
+Unknown command: 'stratproject'. Did you mean startproject?
+Type 'django-admin.py help' for usage.
+(env) vagrant@ubuntu-bionic:/vagrant$ django-admin stratproject profiles_project .
+No Django settings specified.
+Unknown command: 'stratproject'. Did you mean startproject?
+Type 'django-admin help' for usage.
+(env) vagrant@ubuntu-bionic:/vagrant$ django-admin.py startproject profiles_project .
+(env) vagrant@ubuntu-bionic:/vagrant$ dir
+License           Vagrantfile    manage.py         ubuntu-bionic-18.04-cloudimg-console.log
+Requirement.txt   dayone.txt     profiles_project
+Requirements.txt  helloworld.py  readme.md
+(env) vagrant@ubuntu-bionic:/vagrant$ ^C
+(env) vagrant@ubuntu-bionic:/vagrant$ ^C
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py startapp profiles_api
+(env) vagrant@ubuntu-bionic:/vagrant$ ^C
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver  0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 19 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, authtoken, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+April 14, 2021 - 06:08:04
+Django version 2.2, using settings 'profiles_project.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[14/Apr/2021 06:09:16] "GET / HTTP/1.1" 200 16348
+[14/Apr/2021 06:09:17] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[14/Apr/2021 06:09:17] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[14/Apr/2021 06:09:17] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[14/Apr/2021 06:09:17] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+Not Found: /favicon.ico
+[14/Apr/2021 06:09:17] "GET /favicon.ico HTTP/1.1" 404 1982
+[14/Apr/2021 06:09:41] "GET / HTTP/1.1" 200 16348
+[14/Apr/2021 06:09:45] "GET / HTTP/1.1" 200 16348
+[14/Apr/2021 06:09:46] "GET / HTTP/1.1" 200 16348
+[14/Apr/2021 06:09:47] "GET / HTTP/1.1" 200 16348
+^C(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver  0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 19 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, authtoken, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+April 14, 2021 - 06:10:01
+Django version 2.2, using settings 'profiles_project.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[14/Apr/2021 06:10:01] "GET / HTTP/1.1" 200 16348
+[14/Apr/2021 06:10:03] "GET / HTTP/1.1" 200 16348
+[14/Apr/2021 06:10:04] "GET / HTTP/1.1" 200 16348
+[14/Apr/2021 06:10:04] "GET / HTTP/1.1" 200 16348
+/vagrant/profiles_api/models.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 109, in inner_run
+    autoreload.raise_last_exception()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 77, in raise_last_exception
+    raise _exception[0](_exception[1]).with_traceback(_exception[2])
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/models.py", line 4, in <module>
+    from django.contib.auth.models import AbstractBaseUser
+ModuleNotFoundError: No module named 'django.contib'
+
+Traceback (most recent call last):
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/apps/registry.py", line 155, in get_app_config
+    return self.app_configs[app_label]
+KeyError: 'admin'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 60, in execute
+    super().execute(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 95, in handle
+    self.run(**options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 102, in run
+    autoreload.run_with_reloader(self.inner_run, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 579, in run_with_reloader
+    start_django(reloader, main_func, *args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 564, in start_django
+    reloader.run(django_main_thread)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 272, in run
+    get_resolver().urlconf_module
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 20, in <module>
+    path('admin/', admin.site.urls),
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 256, in inner
+    self._setup()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 529, in _setup
+    AdminSiteClass = import_string(apps.get_app_config('admin').default_site)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/apps/registry.py", line 162, in get_app_config
+    raise LookupError(message)
+LookupError: No installed app with label 'admin'.
+(env) vagrant@ubuntu-bionic:/vagrant$ ppython manage.py makemigrations profiles_api
+
+Command 'ppython' not found, did you mean:
+
+  command 'python' from deb python3
+  command 'python' from deb python
+  command 'python' from deb python-minimal
+  command 'ipython' from deb ipython
+  command 'bpython' from deb bpython
+  command 'pmpython' from deb pcp
+  command 'pvpython' from deb paraview-python
+
+Try: apt install <deb name>
+
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py makemigrations profiles_api
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 357, in execute
+    django.setup()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/models.py", line 54
+    """ return string representation of our user?"""
+                                                   ^
+IndentationError: expected an indented block
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py makemigrations profiles_api
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 357, in execute
+    django.setup()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/models.py", line 3, in <module>
+    from django.contib.auth.models import AbstractBaseUser
+ModuleNotFoundError: No module named 'django.contib'
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py makemigrations profiles_api
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 357, in execute
+    django.setup()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/models.py", line 33, in <module>
+    class UserProfile(AbstractBaseUser,PermissionsMixin): #inheritance
+  File "/vagrant/profiles_api/models.py", line 40, in UserProfile
+    objects = UserProfileManager() #classto manage the models above
+NameError: name 'UserProfileManager' is not defined
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py makemigrations profiles_api
+Migrations for 'profiles_api':
+  profiles_api/migrations/0001_initial.py
+    - Create model UserProfile
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, authtoken, contenttypes, profiles_api, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0001_initial... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying profiles_api.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying authtoken.0001_initial... OK
+  Applying authtoken.0002_auto_20160226_1747... OK
+  Applying sessions.0001_initial... OK
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py createsuperuser
+Email: sanjaynithi0@gmail.com
+Password:
+Password (again):
+Error: Your passwords didn't match.
+Password:
+Password (again):
+Error: Your passwords didn't match.
+Password:
+Password (again):
+This password is too short. It must contain at least 8 characters.
+This password is too common.
+This password is entirely numeric.
+Bypass password validation and create user anyway? [y/N]: y
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/contrib/auth/management/commands/createsuperuser.py", line 61, in execute
+    return super().execute(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/contrib/auth/management/commands/createsuperuser.py", line 156, in handle
+    self.UserModel._default_manager.db_manager(database).create_superuser(**user_data)
+AttributeError: 'userProfileManager' object has no attribute 'create_superuser'
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py createsuperuser
+Email: sanjaynithi0@gmail.com
+Password:
+Password (again):
+This password is too short. It must contain at least 8 characters.
+This password is too common.
+This password is entirely numeric.
+Bypass password validation and create user anyway? [y/N]: y
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/contrib/auth/management/commands/createsuperuser.py", line 61, in execute
+    return super().execute(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/contrib/auth/management/commands/createsuperuser.py", line 156, in handle
+    self.UserModel._default_manager.db_manager(database).create_superuser(**user_data)
+TypeError: create_superuser() missing 1 required positional argument: 'name'
+(env) vagrant@ubuntu-bionic:/vagrant$ ^C
+(env) vagrant@ubuntu-bionic:/vagrant$ ^C
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py createsuperuser
+Email: sanjaynithi0@gmail.com
+Password:
+Password (again):
+This password is too short. It must contain at least 8 characters.
+Bypass password validation and create user anyway? [y/N]: y
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/contrib/auth/management/commands/createsuperuser.py", line 61, in execute
+    return super().execute(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/contrib/auth/management/commands/createsuperuser.py", line 156, in handle
+    self.UserModel._default_manager.db_manager(database).create_superuser(**user_data)
+TypeError: create_superuser() missing 1 required positional argument: 'name'
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py createsuperuser
+Email: sanjaynithi0@gmail.com
+Password:
+Password (again):
+This password is too short. It must contain at least 8 characters.
+This password is too common.
+This password is entirely numeric.
+Bypass password validation and create user anyway? [y/N]: y
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/contrib/auth/management/commands/createsuperuser.py", line 61, in execute
+    return super().execute(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/contrib/auth/management/commands/createsuperuser.py", line 156, in handle
+    self.UserModel._default_manager.db_manager(database).create_superuser(**user_data)
+TypeError: create_superuser() missing 1 required positional argument: 'name'
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py createsuperuser
+Email: sanjaynithi0@gmail.com
+Password:
+Password (again):
+Error: Your passwords didn't match.
+Password:
+Password (again):
+This password is too short. It must contain at least 8 characters.
+This password is too common.
+This password is entirely numeric.
+Bypass password validation and create user anyway? [y/N]: y
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/contrib/auth/management/commands/createsuperuser.py", line 61, in execute
+    return super().execute(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/contrib/auth/management/commands/createsuperuser.py", line 156, in handle
+    self.UserModel._default_manager.db_manager(database).create_superuser(**user_data)
+TypeError: create_superuser() missing 1 required positional argument: 'name'
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py createsuperuser
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 357, in execute
+    django.setup()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/models.py", line 11
+    """Create a new user profile"""
+                                  ^
+TabError: inconsistent use of tabs and spaces in indentation
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py createsuperuser
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 357, in execute
+    django.setup()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/models.py", line 11
+    if not email:
+                ^
+TabError: inconsistent use of tabs and spaces in indentation
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py createsuperuser
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 357, in execute
+    django.setup()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/models.py", line 11
+    """Create a new user profile"""
+                                  ^
+TabError: inconsistent use of tabs and spaces in indentation
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py createsuperuser
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 357, in execute
+    django.setup()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/models.py", line 10
+    """Create a new user profile"""
+                                  ^
+TabError: inconsistent use of tabs and spaces in indentation
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py createsuperuser
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 357, in execute
+    django.setup()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/models.py", line 11
+    def create_user(self,email,name,password=None):
+    ^
+IndentationError: unexpected indent
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py createsuperuser
+Email: sanjaynithi0@gmail.com
+Name: Sanjay
+Password:
+Password (again):
+This password is too short. It must contain at least 8 characters.
+This password is too common.
+This password is entirely numeric.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py createsuperuser
+Email: sa
+Error: Enter a valid email address.
+Email: sanjatadhitya2000@gmail.com
+Name: sanjayadhi
+Password:
+Password (again):
+This password is too short. It must contain at least 8 characters.
+This password is too common.
+This password is entirely numeric.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+(env) vagrant@ubuntu-bionic:/vagrant$ puthon manage.py runserver 0.0.0.0:8000
+
+Command 'puthon' not found, did you mean:
+
+  command 'python' from deb python3
+  command 'python' from deb python
+  command 'python' from deb python-minimal
+
+Try: apt install <deb name>
+
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 109, in inner_run
+    autoreload.raise_last_exception()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 77, in raise_last_exception
+    raise _exception[0](_exception[1]).with_traceback(_exception[2])
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/apps/registry.py", line 122, in populate
+    app_config.ready()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/contrib/admin/apps.py", line 24, in ready
+    self.module.autodiscover()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/admin.py", line 2, in <module>
+    from profile_api import models
+ModuleNotFoundError: No module named 'profile_api'
+
+/vagrant/profiles_api/admin.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 14, 2021 - 11:40:59
+Django version 2.2, using settings 'profiles_project.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[14/Apr/2021 11:41:46] "GET / HTTP/1.1" 200 16348
+[14/Apr/2021 11:41:46] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[14/Apr/2021 11:41:46] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[14/Apr/2021 11:41:47] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[14/Apr/2021 11:41:47] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[14/Apr/2021 11:42:06] "GET /admin HTTP/1.1" 301 0
+[14/Apr/2021 11:42:06] "GET /admin/ HTTP/1.1" 302 0
+[14/Apr/2021 11:42:06] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1816
+[14/Apr/2021 11:42:06] "GET /static/admin/css/base.css HTTP/1.1" 200 16378
+[14/Apr/2021 11:42:06] "GET /static/admin/css/login.css HTTP/1.1" 200 1233
+[14/Apr/2021 11:42:07] "GET /static/admin/css/responsive.css HTTP/1.1" 200 17944
+[14/Apr/2021 11:42:19] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[14/Apr/2021 11:42:20] "GET /admin/ HTTP/1.1" 200 4065
+[14/Apr/2021 11:42:20] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[14/Apr/2021 11:42:20] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[14/Apr/2021 11:42:20] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[14/Apr/2021 11:42:46] "GET /admin/profiles_api/ HTTP/1.1" 200 2532
+[14/Apr/2021 11:42:49] "GET /admin/ HTTP/1.1" 200 4065
+[14/Apr/2021 11:43:19] "GET /admin/profiles_api/userprofile/add/ HTTP/1.1" 200 10897
+[14/Apr/2021 11:43:19] "GET /static/admin/js/calendar.js HTTP/1.1" 200 7777
+[14/Apr/2021 11:43:19] "GET /static/admin/css/forms.css HTTP/1.1" 200 8518
+[14/Apr/2021 11:43:19] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[14/Apr/2021 11:43:19] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 20274
+[14/Apr/2021 11:43:19] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 271751
+[14/Apr/2021 11:43:19] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[14/Apr/2021 11:43:20] "GET /static/admin/js/actions.js HTTP/1.1" 200 6538
+[14/Apr/2021 11:43:20] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8972
+[14/Apr/2021 11:43:20] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6918
+[14/Apr/2021 11:43:20] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
+[14/Apr/2021 11:43:20] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+[14/Apr/2021 11:43:20] "GET /static/admin/js/core.js HTTP/1.1" 200 7135
+[14/Apr/2021 11:43:20] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[14/Apr/2021 11:43:20] "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+[14/Apr/2021 11:43:20] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+[14/Apr/2021 11:43:20] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[14/Apr/2021 11:43:20] "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[14/Apr/2021 11:43:31] "GET /admin/profiles_api/userprofile/ HTTP/1.1" 200 4686
+[14/Apr/2021 11:43:32] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+[14/Apr/2021 11:43:32] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[14/Apr/2021 11:43:32] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[14/Apr/2021 11:43:38] "GET /admin/profiles_api/userprofile/2/change/ HTTP/1.1" 200 11298
+[14/Apr/2021 11:43:38] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[14/Apr/2021 11:43:54] "GET /admin/profiles_api/userprofile/ HTTP/1.1" 200 4686
+[14/Apr/2021 11:43:55] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[14/Apr/2021 11:50:53] "GET /admin/ HTTP/1.1" 200 4065
+[14/Apr/2021 11:50:56] "GET /admin/ HTTP/1.1" 200 4065
+[14/Apr/2021 11:51:03] "GET /admin/ HTTP/1.1" 200 4065
+[14/Apr/2021 11:51:09] "GET / HTTP/1.1" 200 16348
+/vagrant/profiles_project/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 573, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 390, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 377, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 399, in check
+    messages.extend(check_resolver(pattern))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 398, in check
+    for pattern in self.url_patterns:
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 580, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name))
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'profiles_api.urls' from '/vagrant/profiles_api/urls.py'>' does not appear to have any patterns in it. If you see valid patterns in the file then the issue is probably caused by a circular import.
+
+^C(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 60, in execute
+    super().execute(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 95, in handle
+    self.run(**options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 102, in run
+    autoreload.run_with_reloader(self.inner_run, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 579, in run_with_reloader
+    start_django(reloader, main_func, *args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 564, in start_django
+    reloader.run(django_main_thread)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 272, in run
+    get_resolver().urlconf_module
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 390, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 377, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 398, in check
+    for pattern in self.url_patterns:
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 571, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 2, in <module>
+    from profiles_api import views
+  File "/vagrant/profiles_api/views.py", line 2, in <module>
+    from rest_framework.reponse import Response
+ModuleNotFoundError: No module named 'rest_framework.reponse'
+
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 2, in <module>
+    from profiles_api import views
+  File "/vagrant/profiles_api/views.py", line 2, in <module>
+    from rest_framework.reponse import Response
+ModuleNotFoundError: No module named 'rest_framework.reponse'
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 390, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 377, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 398, in check
+    for pattern in self.url_patterns:
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 571, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 2, in <module>
+    from profiles_api import views
+  File "/vagrant/profiles_api/views.py", line 2, in <module>
+    from rest_framework.reponse import Response
+ModuleNotFoundError: No module named 'rest_framework.reponse'
+
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 60, in execute
+    super().execute(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 95, in handle
+    self.run(**options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 102, in run
+    autoreload.run_with_reloader(self.inner_run, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 579, in run_with_reloader
+    start_django(reloader, main_func, *args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 564, in start_django
+    reloader.run(django_main_thread)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 272, in run
+    get_resolver().urlconf_module
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 2, in <module>
+    from profiles_api import views
+  File "/vagrant/profiles_api/views.py", line 2, in <module>
+    from rest_framework.reponse import Response
+ModuleNotFoundError: No module named 'rest_framework.reponse'
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 60, in execute
+    super().execute(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 95, in handle
+    self.run(**options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 102, in run
+    autoreload.run_with_reloader(self.inner_run, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 579, in run_with_reloader
+    start_django(reloader, main_func, *args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 564, in start_django
+    reloader.run(django_main_thread)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 272, in run
+    get_resolver().urlconf_module
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 390, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 377, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 398, in check
+    for pattern in self.url_patterns:
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 571, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 5, in <module>
+    path('hello-viewname/',view.HelloApiViewClass.as_view()),
+NameError: name 'view' is not defined
+
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 5, in <module>
+    path('hello-viewname/',view.HelloApiViewClass.as_view()),
+NameError: name 'view' is not defined
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 60, in execute
+    super().execute(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 95, in handle
+    self.run(**options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 102, in run
+    autoreload.run_with_reloader(self.inner_run, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 579, in run_with_reloader
+    start_django(reloader, main_func, *args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 564, in start_django
+    reloader.run(django_main_thread)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 272, in run
+    get_resolver().urlconf_module
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 5, in <module>
+    path('hello-view/',view.HelloApiView.as_view()),
+NameError: name 'view' is not defined
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 14, 2021 - 12:17:29
+Django version 2.2, using settings 'profiles_project.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[14/Apr/2021 12:17:54] "GET /admin/ HTTP/1.1" 200 4065
+Not Found: /api/
+[14/Apr/2021 12:18:02] "GET /api/ HTTP/1.1" 404 2123
+[14/Apr/2021 12:18:28] "GET /api/hello-view/ HTTP/1.1" 200 5600
+[14/Apr/2021 12:18:28] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+[14/Apr/2021 12:18:28] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[14/Apr/2021 12:18:28] "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+[14/Apr/2021 12:18:28] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+[14/Apr/2021 12:18:28] "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+[14/Apr/2021 12:18:28] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[14/Apr/2021 12:18:29] "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[14/Apr/2021 12:18:29] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[14/Apr/2021 12:18:29] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+[14/Apr/2021 12:18:29] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37608
+[14/Apr/2021 12:18:29] "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+/vagrant/profiles_api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 14, 2021 - 12:20:26
+Django version 2.2, using settings 'profiles_project.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[14/Apr/2021 12:24:05] "OPTIONS /api/hello-view/ HTTP/1.1" 200 5635
+[14/Apr/2021 12:24:06] "OPTIONS /api/hello-view/ HTTP/1.1" 200 5635
+[14/Apr/2021 12:26:01] "GET /api/hello-view/ HTTP/1.1" 200 5600
+/vagrant/profiles_api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 390, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 377, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 398, in check
+    for pattern in self.url_patterns:
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 571, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 2, in <module>
+    from profiles_api import views
+  File "/vagrant/profiles_api/views.py", line 5, in <module>
+    from profiles_api import serializers
+  File "/vagrant/profiles_api/serializers.py", line 3, in <module>
+    class HelloSerializer(serializers.Serializer):
+  File "/vagrant/profiles_api/serializers.py", line 5, in HelloSerializer
+    name = serializers.CharFeild(max_length=10)
+AttributeError: module 'rest_framework.serializers' has no attribute 'CharFeild'
+
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 60, in execute
+    super().execute(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 95, in handle
+    self.run(**options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 102, in run
+    autoreload.run_with_reloader(self.inner_run, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 579, in run_with_reloader
+    start_django(reloader, main_func, *args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 564, in start_django
+    reloader.run(django_main_thread)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 272, in run
+    get_resolver().urlconf_module
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 2, in <module>
+    from profiles_api import views
+  File "/vagrant/profiles_api/views.py", line 5, in <module>
+    from profiles_api import serializers
+  File "/vagrant/profiles_api/serializers.py", line 3, in <module>
+    class HelloSerializer(serializers.Serializer):
+  File "/vagrant/profiles_api/serializers.py", line 5, in HelloSerializer
+    name = serializers.CharFeild(max_length=10)
+AttributeError: module 'rest_framework.serializers' has no attribute 'CharFeild'
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 60, in execute
+    super().execute(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 95, in handle
+    self.run(**options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 102, in run
+    autoreload.run_with_reloader(self.inner_run, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 579, in run_with_reloader
+    start_django(reloader, main_func, *args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 564, in start_django
+    reloader.run(django_main_thread)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 272, in run
+    get_resolver().urlconf_module
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 2, in <module>
+    from profiles_api import views
+  File "/vagrant/profiles_api/views.py", line 36
+    status=status.HTTP_400_REQUEST
+          ^
+SyntaxError: invalid syntax
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 60, in execute
+    super().execute(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 95, in handle
+    self.run(**options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 102, in run
+    autoreload.run_with_reloader(self.inner_run, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 579, in run_with_reloader
+    start_django(reloader, main_func, *args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 564, in start_django
+    reloader.run(django_main_thread)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 272, in run
+    get_resolver().urlconf_module
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 2, in <module>
+    from profiles_api import views
+  File "/vagrant/profiles_api/views.py", line 36
+    status=status.HTTP_400_BAD_REQUEST
+          ^
+SyntaxError: invalid syntax
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 60, in execute
+    super().execute(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 95, in handle
+    self.run(**options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 102, in run
+    autoreload.run_with_reloader(self.inner_run, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 579, in run_with_reloader
+    start_django(reloader, main_func, *args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 564, in start_django
+    reloader.run(django_main_thread)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 272, in run
+    get_resolver().urlconf_module
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 2, in <module>
+    from profiles_api import views
+  File "/vagrant/profiles_api/views.py", line 5, in <module>
+    from profiles_api import serializers
+  File "/vagrant/profiles_api/serializers.py", line 3, in <module>
+    class HelloSerializer(serializers.Serializer):
+  File "/vagrant/profiles_api/serializers.py", line 5, in HelloSerializer
+    name = serializers.CharFeild(max_length=10)
+AttributeError: module 'rest_framework.serializers' has no attribute 'CharFeild'
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 14, 2021 - 12:58:02
+Django version 2.2, using settings 'profiles_project.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Not Found: /
+[14/Apr/2021 12:58:17] "GET / HTTP/1.1" 404 2035
+[14/Apr/2021 12:58:23] "GET /api/hello-view/ HTTP/1.1" 200 8780
+[14/Apr/2021 12:58:23] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+[14/Apr/2021 12:58:23] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+[14/Apr/2021 12:58:23] "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+[14/Apr/2021 12:58:23] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37608
+[14/Apr/2021 12:58:23] "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[14/Apr/2021 12:58:23] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[14/Apr/2021 12:58:23] "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+Internal Server Error: /api/hello-view/
+Traceback (most recent call last):
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vagrant/env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/vagrant/env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/vagrant/profiles_api/views.py", line 29, in post
+    name = serializer.validate_data.get('name')
+AttributeError: 'HelloSerializer' object has no attribute 'validate_data'
+[14/Apr/2021 12:58:30] "POST /api/hello-view/ HTTP/1.1" 500 86784
+/vagrant/profiles_api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 14, 2021 - 13:02:02
+Django version 2.2, using settings 'profiles_project.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Internal Server Error: /api/hello-view/
+Traceback (most recent call last):
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vagrant/env/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/vagrant/env/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/vagrant/profiles_api/views.py", line 31, in post
+    return Response({'message':message})
+NameError: name 'message' is not defined
+[14/Apr/2021 13:02:05] "POST /api/hello-view/ HTTP/1.1" 500 86572
+/vagrant/profiles_api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 14, 2021 - 13:06:23
+Django version 2.2, using settings 'profiles_project.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+^C(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 14, 2021 - 13:08:35
+Django version 2.2, using settings 'profiles_project.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[14/Apr/2021 13:09:07] "GET /api/hello-view/ HTTP/1.1" 200 8780
+[14/Apr/2021 13:09:07] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[14/Apr/2021 13:09:07] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[14/Apr/2021 13:09:07] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[14/Apr/2021 13:09:07] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[14/Apr/2021 13:09:15] "POST /api/hello-view/ HTTP/1.1" 200 8495
+[14/Apr/2021 13:09:23] "POST /api/hello-view/ HTTP/1.1" 200 8495
+[14/Apr/2021 13:09:31] "POST /api/hello-view/ HTTP/1.1" 200 8493
+/vagrant/profiles_api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 60, in execute
+    super().execute(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 95, in handle
+    self.run(**options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 102, in run
+    autoreload.run_with_reloader(self.inner_run, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 579, in run_with_reloader
+    start_django(reloader, main_func, *args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 564, in start_django
+    reloader.run(django_main_thread)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 272, in run
+    get_resolver().urlconf_module
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 390, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 377, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 398, in check
+    for pattern in self.url_patterns:
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 571, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 2, in <module>
+    from profiles_api import views
+  File "/vagrant/profiles_api/views.py", line 38
+    serializer = self.serializer_class(data=request.data)
+    ^
+IndentationError: unexpected indent
+
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 2, in <module>
+    from profiles_api import views
+  File "/vagrant/profiles_api/views.py", line 38
+    serializer = self.serializer_class(data=request.data)
+    ^
+IndentationError: unexpected indent
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 60, in execute
+    super().execute(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 364, in execute
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 390, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 377, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 398, in check
+    for pattern in self.url_patterns:
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 571, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 2, in <module>
+    from profiles_api import views
+  File "/vagrant/profiles_api/views.py", line 36
+    def post(self, request):
+                           ^
+IndentationError: unindent does not match any outer indentation level
+
+    output = self.handle(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 95, in handle
+    self.run(**options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 102, in run
+    autoreload.run_with_reloader(self.inner_run, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 579, in run_with_reloader
+    start_django(reloader, main_func, *args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 564, in start_django
+    reloader.run(django_main_thread)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 272, in run
+    get_resolver().urlconf_module
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 2, in <module>
+    from profiles_api import views
+  File "/vagrant/profiles_api/views.py", line 36
+    def post(self, request):
+                           ^
+IndentationError: unindent does not match any outer indentation level
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 14, 2021 - 13:11:51
+Django version 2.2, using settings 'profiles_project.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Method Not Allowed: /api/hello-view/
+[14/Apr/2021 13:11:57] "POST /api/hello-view/ HTTP/1.1" 405 5355
+/vagrant/profiles_api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 60, in execute
+    super().execute(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 95, in handle
+    self.run(**options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 102, in run
+    autoreload.run_with_reloader(self.inner_run, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 579, in run_with_reloader
+    start_django(reloader, main_func, *args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 564, in start_django
+    reloader.run(django_main_thread)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 272, in run
+    get_resolver().urlconf_module
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 390, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 377, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 398, in check
+    for pattern in self.url_patterns:
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 571, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 2, in <module>
+    from profiles_api import views
+  File "/vagrant/profiles_api/views.py", line 23
+    def post(self, request):
+                           ^
+IndentationError: unindent does not match any outer indentation level
+
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 2, in <module>
+    from profiles_api import views
+  File "/vagrant/profiles_api/views.py", line 23
+    def post(self, request):
+                           ^
+IndentationError: unindent does not match any outer indentation level
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 14, 2021 - 13:12:49
+Django version 2.2, using settings 'profiles_project.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[14/Apr/2021 13:12:54] "POST /api/hello-view/ HTTP/1.1" 200 8493
+Bad Request: /api/hello-view/
+[14/Apr/2021 13:12:57] "POST /api/hello-view/ HTTP/1.1" 400 8629
+[14/Apr/2021 13:13:04] "POST /api/hello-view/ HTTP/1.1" 200 8493
+/vagrant/profiles_api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 14, 2021 - 13:15:25
+Django version 2.2, using settings 'profiles_project.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+/vagrant/profiles_api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 14, 2021 - 13:20:37
+Django version 2.2, using settings 'profiles_project.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+^C(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 14, 2021 - 13:21:16
+Django version 2.2, using settings 'profiles_project.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[14/Apr/2021 13:21:26] "POST /api/hello-view/ HTTP/1.1" 200 12801
+Bad Request: /api/hello-view/
+[14/Apr/2021 13:23:41] "POST /api/hello-view/ HTTP/1.1" 400 12807
+[14/Apr/2021 13:23:55] "POST /api/hello-view/ HTTP/1.1" 200 12803
+[14/Apr/2021 13:24:09] "PUT /api/hello-view/ HTTP/1.1" 200 12791
+[14/Apr/2021 13:25:00] "DELETE /api/hello-view/ HTTP/1.1" 200 12797
+/vagrant/profiles_api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 14, 2021 - 13:30:58
+Django version 2.2, using settings 'profiles_project.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+/vagrant/profiles_api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 60, in execute
+    super().execute(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 95, in handle
+    self.run(**options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 102, in run
+    autoreload.run_with_reloader(self.inner_run, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 579, in run_with_reloader
+    start_django(reloader, main_func, *args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 564, in start_django
+    reloader.run(django_main_thread)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 272, in run
+    get_resolver().urlconf_module
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 2, in <module>
+    from profiles_api import views
+  File "/vagrant/profiles_api/views.py", line 48
+    class helloviewSet
+                     ^
+SyntaxError: invalid syntax
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 390, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 377, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 398, in check
+    for pattern in self.url_patterns:
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 571, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 8
+    urlpatterns =
+                 ^
+SyntaxError: invalid syntax
+
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 60, in execute
+    super().execute(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 95, in handle
+    self.run(**options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 102, in run
+    autoreload.run_with_reloader(self.inner_run, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 579, in run_with_reloader
+    start_django(reloader, main_func, *args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 564, in start_django
+    reloader.run(django_main_thread)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 272, in run
+    get_resolver().urlconf_module
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 8
+    urlpatterns =
+                 ^
+SyntaxError: invalid syntax
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 390, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 377, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 398, in check
+    for pattern in self.url_patterns:
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 571, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 2, in <module>
+    from profiles_api import views
+  File "/vagrant/profiles_api/views.py", line 48, in <module>
+    class HelloViewSet(viewsets.viewSet):
+AttributeError: module 'rest_framework.viewsets' has no attribute 'viewSet'
+
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 60, in execute
+    super().execute(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 95, in handle
+    self.run(**options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 102, in run
+    autoreload.run_with_reloader(self.inner_run, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 579, in run_with_reloader
+    start_django(reloader, main_func, *args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 564, in start_django
+    reloader.run(django_main_thread)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 272, in run
+    get_resolver().urlconf_module
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 2, in <module>
+    from profiles_api import views
+  File "/vagrant/profiles_api/views.py", line 48, in <module>
+    class HelloViewSet(viewsets.viewSet):
+AttributeError: module 'rest_framework.viewsets' has no attribute 'viewSet'
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 390, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 377, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 398, in check
+    for pattern in self.url_patterns:
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 571, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 3, in <module>
+    from rest_framework.router import DefaultRouter
+ModuleNotFoundError: No module named 'rest_framework.router'
+
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 60, in execute
+    super().execute(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 95, in handle
+    self.run(**options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 102, in run
+    autoreload.run_with_reloader(self.inner_run, **options)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 579, in run_with_reloader
+    start_django(reloader, main_func, *args, **kwargs)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 564, in start_django
+    reloader.run(django_main_thread)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/autoreload.py", line 272, in run
+    get_resolver().urlconf_module
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/resolvers.py", line 564, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_project/urls.py", line 21, in <module>
+    path('api/', include('profiles_api.urls'))
+  File "/home/vagrant/env/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/vagrant/profiles_api/urls.py", line 3, in <module>
+    from rest_framework.router import DefaultRouter
+ModuleNotFoundError: No module named 'rest_framework.router'
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 14, 2021 - 13:51:14
+Django version 2.2, using settings 'profiles_project.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[14/Apr/2021 13:51:28] "GET /api/hello-view/ HTTP/1.1" 200 13185
+[14/Apr/2021 13:51:28] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[14/Apr/2021 13:51:28] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[14/Apr/2021 13:51:28] "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+[14/Apr/2021 13:51:28] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[14/Apr/2021 13:51:28] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[14/Apr/2021 13:51:28] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[14/Apr/2021 13:51:28] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+Not Found: /
+[14/Apr/2021 13:51:37] "GET / HTTP/1.1" 404 2035
+Not Found: /
+[14/Apr/2021 13:51:39] "GET / HTTP/1.1" 404 2035
+Not Found: /
+[14/Apr/2021 13:51:47] "GET / HTTP/1.1" 404 2035
+[14/Apr/2021 13:52:44] "GET /api/hello-view/ HTTP/1.1" 200 13185
+[14/Apr/2021 13:52:48] "GET /api/ HTTP/1.1" 200 5376
+Not Found: /
+[14/Apr/2021 13:52:53] "GET / HTTP/1.1" 404 2035
+[14/Apr/2021 13:53:01] "GET /api/ HTTP/1.1" 200 5376
+[14/Apr/2021 13:53:06] "GET /api/hello-view/ HTTP/1.1" 200 13185
+[14/Apr/2021 13:53:23] "GET /api/ HTTP/1.1" 200 5376
+ [14/Apr/2021 13:54:05] "GET /api/hello-viewset/ HTTP/1.1" 200 5696
+[14/Apr/2021 13:54:45] "GET /api/hello-viewset/ HTTP/1.1" 200 5696
+[14/Apr/2021 13:54:45] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[14/Apr/2021 13:54:46] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[14/Apr/2021 13:54:46] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[14/Apr/2021 13:54:46] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[14/Apr/2021 13:54:49] "GET /api/ HTTP/1.1" 200 5376
+^C(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 14, 2021 - 14:08:08
+Django version 2.2, using settings 'profiles_project.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[14/Apr/2021 14:08:23] "GET /api/ HTTP/1.1" 200 5376
+[14/Apr/2021 14:08:26] "GET /api/ HTTP/1.1" 200 5376
+[14/Apr/2021 14:08:28] "GET /api/hello-viewset/ HTTP/1.1" 200 8884
+[14/Apr/2021 14:09:13] "POST /api/hello-viewset/ HTTP/1.1" 200 8634
+Bad Request: /api/hello-viewset/
+[14/Apr/2021 14:09:28] "POST /api/hello-viewset/ HTTP/1.1" 400 8830
+^C(env) vagrant@ubuntu-bionic:/vagrant$ deactivate
+vagrant@ubuntu-bionic:/vagrant$
