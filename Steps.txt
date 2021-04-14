@@ -1,0 +1,7 @@
+so ihave first created a git resp
+then a installed vagrant and strated using git bash to create a new vagrant file by vagrant up
+and i booted up the vagrant eevn by vagrant ssh
+then  i created a  vitual evn by  python -m venv ~/env and activated it.
+then i have installed  pip install -r requirements.txt
+created a django project and app in root vagrant directory itself
+
