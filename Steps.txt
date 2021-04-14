@@ -5,3 +5,22 @@ then  i created a  vitual evn by  python -m venv ~/env and activated it.
 then i have installed  pip install -r requirements.txt
 created a django project and app in root vagrant directory itself
 
+so after that i have created a urls-path connction to urls.py that i have created on my own.
+
+then i have created model <data spaces in sqlite data base > for creating storing  the user superuser 
+ and i have created the super user
+ then created an api with 
+ 		an_apiview = [
+            'Uses HTTP methods as functions (get, post, patch, put, delete)',
+            'Is similar to a traditional Django View',
+            'Gives you the most control over your logic',
+            'Is mapped manually to URLs',
+        ]
+and
+an viewset with
+		a_viewset =[
+                'users action (lists,Create,retrive,update,partial_update)',
+                'AUtomatically maps to urls using routers',
+                'provides more funtionality then apiview with very shortcode',
+        ]
+        
